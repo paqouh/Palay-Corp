@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: relative;
+    width: 100%;
+}
+
+.top-nav {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ddd;
+
+}
+
+.top-nav .left {
+    display: flex;
+    margin-left: 100px;
+}
+
+.left li {
+    margin-right: 7px;
+}
+
+.left li a {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #444;
+}
+
+.left li a i {
+    background-color: #fff;
+    padding: 2px;
+    margin: 0 3px;
+    border-radius: 50%;
+    font-size: 1.1em;
+}
+
+.top-nav .right {
+    display: flex;
+    margin-right: 100px;
+}
+
+.right li:not(:last-child) {
+    margin-right: 20px;   
+}
+
+.right li a {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #444;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+.navigation .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navigation .logo img {
+    width: 50px;
+    margin-left: 100px;
+    margin-right: 10px;
+}
+
+.logo h3 {
+    font-size: 1.5em;
+}
+
+.logo h3 span {
+    color: green;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.logo h6 {
+    margin-left: 20px;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.logo h4 {
+    margin-left: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: green;
+}
+
+
+.navigation form input {
+    position: relative;
+    top: 50%;
+    right: 95px;
+    width: 500px;
+    padding: 5px 10px;
+    border: 2px solid rgb(21, 255, 0);
+}
+
+.navigation form button {
+    position: relative;
+    top: 50%;
+    right: 100px;
+    padding: 7px 25px;
+    background-color: rgb(21, 255, 0);
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+header .content {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.main-content {
+    position: relative;
+    top: 30px;
+    width: calc(100vw - 230px);
+    height: 100%;
+    margin: 0 auto;
+}
+
+.main-content .offer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid green;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.offer i{
+    color: rgb(0, 153, 255);
+    font-size: 20px;
+    margin: 0 15px;
+}
+
+.offer p {
+    font-weight: 500;
+
+}
+
+.main-content table {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;    
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+}
+
+.main-content table th{
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+    background: rgb(6, 128, 6);
+    
+}
+
+.main-content table td {
+    border-bottom: 1px solid rgba(112, 111, 111, 0.959);
+    padding: 15px 10px;
+}
+
+table th:first-of-type, table td:first-of-type {
+    width: 40%;
+}
+
+table th:not(:first-of-type) , table td:not(:first-of-type){
+    text-align: center;
+}
+
+table td .purchase {
+    display: flex;
+    align-items: center;
+
+}
+
+table td button {
+    width: 30px;
+    height: 24px;
+    margin: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+table td input {
+    width: 50px;
+    text-align: center;
+    padding: 0;
+    font-weight: 500;
+    margin: 0;
+}
+
+
+table td:last-of-type  a{
+    margin-right: 10px;
+}
+
+table td select {
+    width: 100px;
+    margin: 0;
+    
+}
+
+table td .purchase img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.checkout-panel {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 120px;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.checkout-panel .top {
+    position: relative
+
+}

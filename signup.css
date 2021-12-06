@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --grey: #eee;
+    --green: rgb(3, 194, 3);
+}
+
+body {
+    background-color: var(--grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.green {
+    position: absolute;
+    bottom: -100px;
+    left: -70px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: rgba(7, 179, 7, 0.5);
+    
+}
+
+.green-yellow {
+    position: absolute;
+    top: -70px;
+    right: 70px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(145, 255, 0, 0.5);
+    transform-style: preserve-3d;
+    transform: rotateZ(60deg);
+    
+}
+
+.light-green {
+    position: absolute;
+    right: 50px;
+    bottom: 70px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(51, 255, 0, 0.3);
+    
+}
+
+.container {
+    display: flex;
+    width: 60%;
+    margin-top: 40px;
+    height: calc(100vh - 180px);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 40px;
+}
+
+.container .intro {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: 45%;
+    background: url(images/crop.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+.container .intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(4, 240, 4, 0.774), rgba(3, 136, 21, 0.774));
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.intro .content {
+    position: absolute;
+    z-index: 100;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content h1 {
+    color: #fff;
+    font-size: 3em;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.content .logo img {
+    width: 50px;
+}
+
+.content .logo h3 span {
+    color: green;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.content p {
+    font-weight: 600;
+    flex-wrap: wrap;
+    margin: 5px 0;
+    padding: 0 5px;
+    color: #fff;
+}
+
+.content button {
+    padding:  10px 40px;
+    margin-top: 25px;
+    font-weight: 600;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    border: none;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    
+}
+
+.content button:hover {
+    color: rgb(2, 68, 2);
+    background-color: #fff;
+}
+
+.create {
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    width: 55%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+.create h1 {
+    color: green;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+.create .soc-icon {
+    margin: 5px 0;
+}
+
+.create .soc-icon ion-icon {
+    width: 30px;
+    border: 0.5px solid #444;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.create p {
+    font-size: 0.9em;
+    color: #444;
+}
+
+.create .reg-form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    text-align: center;
+}
+
+.reg-form input {
+    width: 100%;
+    height: 40px;
+    margin: 4px 0;
+    padding: 4px 10px;
+    background-color: #eee;
+    color: #444;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+
+.reg-form button {
+    padding:  10px 40px;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    width: 60%;
+    right: 50%;
+    transform: translateX(35%);
+    border: none;
+    outline: none;
+    background: green;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    
+}

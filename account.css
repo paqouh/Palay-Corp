@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.top-nav {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ddd;
+
+}
+
+.top-nav .left {
+    display: flex;
+    margin-left: 100px;
+}
+
+.left .language, .left .currency{
+    margin-right: 20px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.left .option {
+    font-size: 0.7em;
+    font-weight: 500;
+    color: #444;
+}
+
+.top-nav .right {
+    display: flex;
+    margin-right: 100px;
+}
+
+.right li:not(:last-child) {
+    margin-right: 20px;   
+}
+
+.right li a {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #444;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+.navigation .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navigation .logo img {
+    width: 50px;
+    margin-left: 100px;
+    margin-right: 10px;
+}
+
+.logo h3 {
+    font-size: 1.5em;
+}
+
+.logo h3 span {
+    color: green;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.navigation .nav-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-content .search input {
+    width: 500px;
+    padding: 7px 20px;
+    margin-right: 0;
+    border-right: none;
+    border: 1px solid #222;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-radius: 20px;
+}
+
+.nav-content .search button {
+    position: absolute;
+    color: #111;
+    width: 50px;
+    height: 32px;
+    right: 6px;
+    top: 2px;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding-top: 5px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+    background: #fff;
+}
+.nav-content .nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 10px 10px 0;
+}
+
+.nav-links li a{
+    color: #222;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links li:hover a {
+    color: rgb(21, 255, 0);
+}
+
+.navigation .cart {
+    display: flex;
+    margin-right: 100px;
+    align-items: center;
+}
+
+.cart i {
+    font-size: 2.5em;
+    
+}
+
+.cart .cart-details{
+    margin-left: 15px;
+    position: relative;
+}
+
+.cart .cart-details::before {
+    --content: '15';
+    content: var(--content);
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    left: -25px;
+    top: -2px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(21, 255, 0);
+    font-size: 12px;
+    color: #fff;
+    border-radius: 50%;
+    z-index: 10;
+    overflow: visible;
+}
+
+.cart-details h5{
+    color: #333;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.cart-details p {
+    font-size: 0.9em;
+    color: #333;
+    font-weight: 500;
+}
+
+header .content {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background-color: #eee;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+    
+}
+
+.side-nav {
+    position: relative;
+    left: 100px;
+    top: 10px;
+    width: 22%;
+    padding: 10px;
+}
+
+.side-nav .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+    height: 90px;
+}
+
+.profile .img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+    background: url('images/default_profile.png');
+    background-position: center;
+    background-size: contain;
+}
+
+.profile .details h4 {
+    color: #222;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.profile .details p a {
+    color: #333;
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+
+
+.side-nav-links {
+    margin-top: 10px;
+}
+
+.side-nav-links li {
+    display: block;
+    width: 100%;
+    margin-right: 25px;
+    padding: 10px 5px;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.side-nav-links li:hover {
+    background-color: #ccc;
+}
+
+.side-nav-links li:hover i, .side-nav-links li:hover a {
+    color: #fff;
+}
+
+.side-nav-links li i {
+    color: #111;
+    font-size: 1.2em;
+    margin: 0 10px 0 30px;
+    transition: all 0.2s ease-in-out;
+    
+}
+
+.side-nav-links li a {
+    color: #111;
+    font-size: 1.1em;
+    line-height: 1.02em;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.content-info {
+    position: relative;
+    left: 100px;
+    top: 10px;
+    width: 63%;
+    height: calc(80vh - 20px);
+    display: none;
+
+}
+
+.content-info.active {
+    display: block;
+}
+
+/*--------------------------My Account--------------------------------*/
+.account-profile {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+.profile-title {
+    width: 100%;
+    height: 55px;
+    padding: 7px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #d8d6d6;
+}
+
+.profile-title h4 {
+    font-size: 14px;
+    color: #333;
+    padding: 0;
+    margin: 0;
+
+}
+
+.account-profile p {
+    font-size: 12px;
+    color: #444;
+}
+
+.profile-content {
+    width: 100%;
+    height: calc(100% - 55px);
+    display: flex;
+}
+
+.profile-content-left {
+    width: 70%;
+    height: 100%;
+    padding: 25px 15px;
+    border-right: 1px solid #d8d6d6;
+    /* overflow-y: hidden; */
+
+}
+
+.profile-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+
+}
+
+.profile-row label {
+    font-size: 12px;
+    width: 20%;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.profile-row:nth-of-type(2) a {
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.profile-row:nth-of-type(6) p {
+    margin: 0 5px;
+    font-size: 12px;
+}
+
+.profile-row input[type="text"],
+.profile-row input[type="date"],
+.profile-row input[type="email"],
+.profile-row input[type="password"] {
+    width: 75%;
+    padding: 3px 10px;
+    font-size: 12px;
+}
+
+.profile-row:nth-of-type(8) button {
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(13, 104, 10);
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: calc(90% - 10px);
+}
+.profile-content-right {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.profile-content-right i {
+    font-size: 50px;
+    color: #333;
+    background-color: #ccc;
+    padding: 25px;
+    border-radius: 50%;
+}
+
+.profile-content-right span {
+    margin: 25px 0;
+    padding: 5px 15px;
+    border: 1px solid rgb(43, 97, 245);
+    color: #222;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+
+
+/*-------------------------------------My Purchase--------------------------------*/
+
+
+.content-info .content-slide.purchase .purchase-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 1px 5px rgba(53, 52, 52, 0.2);
+}
+
+.purchase-header .purchase-links {
+    width: calc(100%/6);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.purchase-header .purchase-links.active {
+    background-color: green;
+}
+
+.purchase-header .purchase-links.active a{
+    color: #fff;
+}
+
+.purchase-header li:hover {
+    border-bottom: 2px solid green;
+}
+
+.purchase-header li a {
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+    transition: all 1s ease;
+}
+
+.purchase-header li:hover a {
+    color: green;
+}
+
+.content-info .content-slide.purchase .purchase-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 460px;
+    margin-top: 10px;
+    background: #fff;
+    box-shadow: 0 1px 5px rgba(53, 52, 52, 0.2);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.content-info .content-slide.purchase .purchase-content.active {
+    display: flex;
+}
+
+.purchase-content span {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(155,155,155,0.4);
+    margin-bottom: 10px;
+}
+
+.purchase-content span i {
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 80px;
+    color: rgb(9, 65, 4);
+}
+
+
+/*-------------------------------------My Notifications--------------------------------*/
+
+
+.notifications,
+.banking,
+.investment {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+.notifications-title,
+.banking-title,
+.investment-title {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #333;
+    padding: 15px;
+}
+
+.notifications-title h4,
+.banking-title h4,
+.investment-title h4 {
+    font-size: 14px;
+    color: #444;
+}
+
+
+/*-------------------------------------Banking--------------------------------*/
+
+
+
+/*-------------------------------------Investment--------------------------------*/
